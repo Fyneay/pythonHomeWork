@@ -1,0 +1,18 @@
+from random import shuffle #импорт метода перемешивания
+from random import randint #Для случайных чисел
+print('Первое задание')
+lst1 = [randint(0,100000) for i in range(1000)] #Создает случайные целые числа от 0 до 100000 в пределе 1000
+print(max(lst1))
+print('Второе задание')
+lst1 = [randint(0,100000) for i in range(100000)]
+lst2 = [max(lst1)]
+a=1
+while a!=4:
+    if(max(lst1)!=min(lst2)):
+        lst2.append(max(lst1))
+        lst1.remove(max(lst1))
+        a=a+1
+    else:
+        lst1.remove(max(lst1))
+shuffle(lst2)
+print(lst2)
