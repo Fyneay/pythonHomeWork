@@ -1,0 +1,12 @@
+k=int(input(''))
+m=int(input(''))
+summer = 0.0
+count = 0
+try:
+    for i in range(k, m+1): 
+        if i%3 == 0:
+            summer+=i
+            count+=1
+    print(summer/float(count))
+except:
+    print("число k должно быть больше числа m")
